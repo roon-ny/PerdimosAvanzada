@@ -14,8 +14,8 @@ public class TallerMinipigs {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("kevin bobo");
+        System.out.println("ronaldocabezaepolla");
+        System.out.println("Kevin hpta");
     }
     
 }
