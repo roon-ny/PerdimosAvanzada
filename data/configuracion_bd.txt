@@ -1,0 +1,42 @@
+======================================================================
+DOCUMENTACION DE BASE DE DATOS Y ARCHIVOS DEL PROYECTO MINIPIG
+======================================================================
+
+BASE DE DATOS
+--------------
+Motor       : MySQL (XAMPP)
+Nombre BD   : minipigdb
+Usuario     : root
+Contrasena  : (vacia - defecto XAMPP)
+URL JDBC    : jdbc:mysql://localhost/minipigdb
+
+PASOS PARA CREAR LA BASE DE DATOS
+-----------------------------------
+1. Iniciar XAMPP (Apache + MySQL)
+2. Abrir phpMyAdmin: http://localhost/phpmyadmin
+3. Ejecutar el script: data/setup_db.sql
+   (Ir a: SQL > pegar contenido > Ejecutar)
+
+TABLAS
+-------
+Tabla: minipigs
+  - codigo          VARCHAR(20)  PK   Codigo unico del minipig
+  - nombre          VARCHAR(100)      Nombre dado por el propietario
+  - genero          VARCHAR(20)       Genero/sexo (Macho/Hembra)
+  - id_microchip    VARCHAR(50) UNIQUE Identificador del microchip
+  - raza            VARCHAR(50)       Raza del minipig
+  - color           VARCHAR(50)       Color del pelaje
+  - peso            VARCHAR(20)       Peso (ej: 32kg)
+  - altura          VARCHAR(20)       Altura (ej: 43cm)
+  - caracteristica1 VARCHAR(100)      Caracteristica 1
+  - caracteristica2 VARCHAR(100)      Caracteristica 2
+  - url_foto        VARCHAR(255)      Ruta/URL de la foto
+
+ARCHIVOS DEL PROYECTO
+----------------------
+data/db.properties       -> Parametros de conexion a BD
+data/minipigs.properties -> Datos iniciales de precarga
+data/setup_db.sql        -> Script SQL de creacion de BD y tablas
+data/configuracion_bd.txt-> Este archivo de documentacion
+
+======================================================================
